@@ -6,8 +6,8 @@ with open("README.md", "r") as fh:
 setuptools.setup(
     name="reinvent_models",
     version="0.0.7",
-    author="PaccMann Team",
-    description="Generative models for Reinvent adapted for PaccMann",
+    author="GT4SD Team",
+    description="Generative models for Reinvent adapted for GT4SD",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/PaccMann/reinvent_models",
