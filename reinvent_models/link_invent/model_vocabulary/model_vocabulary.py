@@ -1,10 +1,6 @@
 from typing import List
 
-from reinvent_models.link_invent.model_vocabulary.vocabulary import (
-    Vocabulary,
-    SMILESTokenizer,
-    create_vocabulary,
-)
+from reinvent_models.link_invent.model_vocabulary.vocabulary import Vocabulary, SMILESTokenizer, create_vocabulary
 
 
 class ModelVocabulary:

@@ -5,12 +5,12 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="reinvent_models",
-    version="0.0.7",
-    author="PaccMann Team",
-    description="Generative models for Reinvent adapted for PaccMann",
+    version="0.0.14",
+    author="GT4SD Team",
+    description="Generative models for Reinvent adapted for GT4SD",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/PaccMann/reinvent_models",
+    url="https://github.com/GT4SD/reinvent_models",
     packages=setuptools.find_packages(exclude=("testing",)),
     classifiers=[
         "Programming Language :: Python :: 3",
