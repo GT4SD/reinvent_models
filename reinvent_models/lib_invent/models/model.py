@@ -115,16 +115,17 @@ class DecoratorModel:
         """
         batch_size = scaffold_seqs.size(0)
         
-        input_vector = torch.full(
-                (batch_size, 1), self.vocabulary.decoration_vocabulary["^"], dtype=torch.long)
-        nlls = torch.zeros(batch_size)
-        not_finished = torch.ones(batch_size, 1, dtype=torch.long)
-
         if torch.cuda.is_available():
             input_vector = torch.full(
                 (batch_size, 1), self.vocabulary.decoration_vocabulary["^"], dtype=torch.long).cuda()  # (batch, 1)
             nlls = torch.zeros(batch_size).cuda()
             not_finished = torch.ones(batch_size, 1, dtype=torch.long).cuda()
+        else:
+            # cpu
+            input_vector = torch.full(
+                (batch_size, 1), self.vocabulary.decoration_vocabulary["^"], dtype=torch.long)
+            nlls = torch.zeros(batch_size)
+            not_finished = torch.ones(batch_size, 1, dtype=torch.long)
 
         # print(f"input_vector: {input_vector}")
         seq_lengths = torch.ones(batch_size)  # (batch)
