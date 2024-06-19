@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="reinvent_models",
-    version="0.0.14",
+    version="0.0.16",
     author="GT4SD Team",
     description="Generative models for Reinvent adapted for GT4SD",
     long_description=long_description,
