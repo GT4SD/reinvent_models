@@ -65,6 +65,8 @@ class Encoder(tnn.Module):
     def _initialize_hidden_state(self, batch_size):
         if torch.cuda.is_available():
             return torch.zeros(self.num_layers*2, batch_size, self.num_dimensions).cuda()
+        else:
+            return torch.zeros(self.num_layers*2, batch_size, self.num_dimensions).cpu() #  openad fix
 
     def get_params(self):
         parameter_enums = GenerativeModelParametersEnum
