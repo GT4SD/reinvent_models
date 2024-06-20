@@ -10,7 +10,7 @@ setuptools.setup(
     description="Generative models for Reinvent adapted for GT4SD",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/acceleratedscience/reinvent_models",
+    url="https://github.com/GT4SD/reinvent_models",
     packages=setuptools.find_packages(exclude=("testing",)),
     classifiers=[
         "Programming Language :: Python :: 3",
